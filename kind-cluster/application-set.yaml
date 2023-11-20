@@ -5,17 +5,17 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  # Observe pull requests in evanshortiss/neon-kube-previews-application. This
-  # is the repository that contains the application source code
+  # Check for pull requests in evanshortiss/neon-kube-previews-application once
+  # per minute. This repository that contains the application source code
   - pullRequest:
+      requeueAfterSeconds: 60
       github:
         owner: evanshortiss
         repo: neon-kube-previews-application
   # We need to tell Argo CD to ignore differences/drift in the Application's
   # Helm params. This is because our GitHub Ations CI pipeline will override
-  # the database url and image tag. If we didn't explicitly ignore those
-  # changes, Argo CD would wipe them away, as you might want it to under normal
-  # circumstances!
+  # the database url and image tag. Argo CD would wipe these changes away if
+  # we didn't tell it not to - this is desirable in production but not here!
   ignoreApplicationDifferences:
   - jqPathExpressions:
     - .spec.source.helm.parameters

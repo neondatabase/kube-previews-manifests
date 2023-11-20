@@ -12,7 +12,7 @@ machine.
 
 _Note: If you're using macOS, refer to the Docker [resources guide for macOS](https://docs.docker.com/desktop/settings/mac/#resources) to ensure your Docker installation has access to a couple of cores and gigabytes of RAM before continuing._
 
-Install the following CLIs. Most are available via package managers suc as
+Install the following CLIs. Most are available via package managers such as
 [`brew`](https://brew.sh/):
 
 * [kubectl](https://kubernetes.io/docs/reference/kubectl/)
@@ -23,14 +23,15 @@ Install the following CLIs. Most are available via package managers suc as
 
 A `setup.sh` script is included in this directory to simplify the creation of
 your Kubernetes cluster using Kind, and the installation and configuration of
-Argo CD.
+Argo CD inside the Kubernetes cluster.
 
 _Note: If you're using an unpaid ngrok account, go to **Cloud Edge > Domains** and create a new domain. Use that domain as the value for the `NGROK_ARGOCD_HOSTNAME` in the script below._
 
 ```bash
 cd kind-cluster/
 
-# Edit the "owner" and "repoURL" fields to match your GitHub org/username
+# Edit the "owner", "repo", and "repoURL" fields to match the GitHub org/username
+# that you forked the application and manifest repositories under
 vi application-set.yaml
 
 # Run the setup script with your NGROK credentials
@@ -39,3 +40,7 @@ NGROK_AUTHTOKEN="authtoken_goes_here" \
 NGROK_ARGOCD_HOSTNAME="argocd.$USER.ngrok.app" \
 ./setup.sh
 ```
+
+Once the setup is complete you will see that the details of your Argo CD
+instance are printed. These are the values that are required as secrets in the
+[application repository](https://github.com/evanshortiss/neon-kube-previews-application#requirements).
