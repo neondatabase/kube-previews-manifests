@@ -1,0 +1,26 @@
+
+deployment:
+  # More replicas in production vs dev
+  replicaCount: 2
+  port: 3000
+  image:
+    repository: evanshortiss/neon-kube-previews
+    pullPolicy: Always
+    # Fixed container image tag. Update this to rollout a new version of the
+    # elements application to the production environment
+    tag: 8fb8866310dbaad7c117c81b98cac99913b9e45e
+  resources:
+    limits:
+      # Burstable up to 1/2 core and 1/2 a gig
+      cpu: 500m
+      memory: 1Gi
+    requests:
+      cpu: 250m
+      memory: 512Mi
+service:
+  port: 80
+ingress: {}
+labels:
+  app: neon-kube-previews
+  environment: "production"
+database: {}
