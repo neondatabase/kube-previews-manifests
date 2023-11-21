@@ -7,5 +7,5 @@ explains the end-to-end flow.
 
 # Kubernetes Cluster Setup
 
-If need a Kubernetes cluster to try this demo yourself, take a look at
-(_kind-cluster/README.md_)[/kind-cluster/README.md].
+If you need help creating a Kubernetes cluster to try this demo yourself, take a look at
+[_kind-cluster/README.md_](/kind-cluster/README.md).
