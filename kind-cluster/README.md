@@ -43,4 +43,4 @@ NGROK_ARGOCD_HOSTNAME="argocd.$USER.ngrok.app" \
 
 Once the setup is complete you will see that the details of your Argo CD
 instance are printed. These are the values that are required as secrets in the
-[application repository](https://github.com/evanshortiss/neon-kube-previews-application#requirements).
+[application repository](https://github.com/neondatabase/kube-previews-application#requirements).

@@ -3,7 +3,7 @@
 This repository contains manifests used to deploy a Next.js application on
 Kubernetes using [Argo CD](https://argo-cd.readthedocs.io/en/stable/). 
 
-Visits the [README in the application repository](https://github.com/evanshortiss/neon-kube-previews-application)
+Visits the [README in the application repository](https://github.com/neondatabase/kube-previews-application)
 for an overview of the end-to-end flow.
 
 ## Kubernetes Cluster Setup
