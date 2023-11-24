@@ -10,7 +10,8 @@ online using the [ngrok Ingress Controller for Kubernetes](https://ngrok.com/doc
 Install [Docker](https://docs.docker.com/engine/install/) on your development
 machine.
 
-_Note: If you're using macOS, refer to the Docker [resources guide for macOS](https://docs.docker.com/desktop/settings/mac/#resources) to ensure your Docker installation has access to a couple of cores and gigabytes of RAM before continuing._
+> [!TIP]
+> If you're using macOS, refer to the Docker [resources guide for macOS](https://docs.docker.com/desktop/settings/mac/#resources) to ensure your Docker installation has access to a couple of cores and gigabytes of RAM before continuing._
 
 Install the following CLIs. Most are available via package managers such as
 [`brew`](https://brew.sh/):
@@ -25,7 +26,8 @@ A `setup.sh` script is included in this directory to simplify the creation of
 your Kubernetes cluster using Kind, and the installation and configuration of
 Argo CD inside the Kubernetes cluster.
 
-_Note: If you're using an unpaid ngrok account, go to **Cloud Edge > Domains** and create a new domain. Use that domain as the value for the `NGROK_ARGOCD_HOSTNAME` in the script below._
+> [!IMPORTANT]
+> If you're using an unpaid ngrok account, go to **Cloud Edge > Domains** and create a new domain. Use that domain as the value for the `NGROK_ARGOCD_HOSTNAME` in the script below.
 
 ```bash
 cd kind-cluster/
