@@ -11,7 +11,7 @@ Install [Docker](https://docs.docker.com/engine/install/) on your development
 machine.
 
 > [!TIP]
-> If you're using macOS, refer to the Docker [resources guide for macOS](https://docs.docker.com/desktop/settings/mac/#resources) to ensure your Docker installation has access to a couple of cores and gigabytes of RAM before continuing._
+> If you're using macOS, refer to the Docker [resources guide for macOS](https://docs.docker.com/desktop/settings/mac/#resources) to ensure your Docker installation has access to a couple of cores and gigabytes of RAM before continuing.
 
 Install the following CLIs. Most are available via package managers such as
 [`brew`](https://brew.sh/):
