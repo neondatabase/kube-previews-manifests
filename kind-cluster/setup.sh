@@ -46,7 +46,7 @@ echo "Starting cluster setup. Logs and errors will be written to $LOG_FILE"
 echo ""
 echo "Creating Kind cluster..."
 kind create cluster --name $CLUSTER_NAME >> $LOG_FILE
-kubectl config use-context 'kind-argocd-previews' >> $LOG_FILE
+kubectl config use-context "kind-$CLUSTER_NAME" >> $LOG_FILE
 
 # Create a namespace and deploy Argo CD into it
 echo "Installing Argo CD..."
